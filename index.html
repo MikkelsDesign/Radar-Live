@@ -1,81 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clean Website</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genre Quiz</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-          <a href="#" class="logo">RXP</a>
-          <ul class="nav-links">
-            <li class="dropdown">
-              <a href="#guides" class="nav-item">Guides</a>
-              <div class="dropdown-menu">
-                <div class="dropdown-column">
-                  <h4>Modern</h4>
-                  <a href="#">The War Within</a>
-                </div>
-                <div class="dropdown-column">
-                  <h4>Classic</h4>
-                  <a href="#">Cataclysm Classic</a>
-                  <a href="#">Season of Discovery</a>
-                  <a href="#">Classic Era</a>
-                  <a href="#">Classic Hardcore</a>
-                </div>
-              </div>
-            </li>
-            <li><a href="#gift-cards" class="nav-item">Gift Cards</a></li>
-            <li><a href="#addon" class="nav-item">Download Addon</a></li>
-            <li><a href="#account" class="nav-item">My Account</a></li>
-          </ul>
+    <div id="quiz-container">
+        <h1>Discover Your Music Genre</h1>
+        <div id="question-container">
+            <!-- Questions will dynamically update here -->
+            <div class="question" id="q1">
+                <p>What kind of vibe do you look for in music?</p>
+                <button class="answer" data-value="rock">High energy</button>
+                <button class="answer" data-value="jazz">Mellow</button>
+                <button class="answer" data-value="pop">Catchy</button>
+                <button class="answer" data-value="electronic">Experimental</button>
+                <button class="answer" data-value="classical">Timeless</button>
+            </div>
         </div>
-      </nav>
-
-  <!-- Slideshow -->
-  <section id="slideshow" class="slideshow">
-    <div class="slide fade">
-      <img src="https://via.placeholder.com/1200x400" alt="Slide 1">
-    </div>
-    <div class="slide fade">
-      <img src="https://via.placeholder.com/1200x400" alt="Slide 2">
-    </div>
-    <div class="slide fade">
-      <img src="https://via.placeholder.com/1200x400" alt="Slide 3">
-    </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </section>
-
-  <!-- Product Tiles -->
-  <section id="products" class="products-section">
-    <div class="container">
-      <h2>Our Products</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200" alt="Product 1">
-          <h3>Product 1</h3>
-          <p>$25.00</p>
-          <button>Buy Now</button>
+        <div id="next-container">
+            <button id="next-btn" style="display: none;">Next</button>
         </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200" alt="Product 2">
-          <h3>Product 2</h3>
-          <p>$30.00</p>
-          <button>Buy Now</button>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200" alt="Product 3">
-          <h3>Product 3</h3>
-          <p>$20.00</p>
-          <button>Buy Now</button>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

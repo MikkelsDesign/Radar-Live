@@ -1,243 +1,64 @@
-/* CSS RESET */
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-}
-
-button {
-    all: unset;
-    cursor: pointer;
-}
-
-input, textarea, select {
-    font: inherit;
-}
-
+/* styles.css */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeSpeed;
-}
-
-html, body {
-    height: 100%;
-}
-
-/* Slut på CSS RESET */
-
-/* Reset */
-body, html {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* General Navbar Styles */
-  .navbar {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1200px;
-    background: rgba(40, 44, 52, 0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    padding: 15px 20px;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar:hover {
-    padding: 25px 20px;
-    background: rgba(40, 44, 52, 0.9);
-  }
-  
-  .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Logo */
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Nav Links */
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-  
-  .nav-item {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px;
-    transition: color 0.3s ease, background 0.3s ease;
-    border-radius: 8px;
-  }
-  
-  .nav-item:hover {
-    background: linear-gradient(90deg, #3b82f6, #9333ea);
-    color: white;
-  }
-  
-  /* Dropdown Menu */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 300px;
-    background: linear-gradient(to bottom, #2e3440, #434c5e);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    display: none;
-    flex-direction: column;
-    padding: 15px;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-  }
-  
-  .dropdown-column {
-    margin-bottom: 15px;
-  }
-  
-  .dropdown-column h4 { 
-    margin: 0 0 10px 0;
-    color: #aaa;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-  
-  .dropdown-menu a {
-    text-decoration: none;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-  }
-  
-  .dropdown-menu a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Slideshow Styles */
-  .slideshow {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .slide {
-    display: none;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 20px;
-  }
-  
-  .next {
-    right: 20px;
-  }
-  
-  /* Product Section */
-  .products-section {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-  }
-  
-  .products-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .products-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-  }
-  
-  .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    align-items: center;
+    height: 100vh;
+}
+
+#quiz-container {
+    background: #333;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    width: 350px;
     text-align: center;
-    max-width: 200px;
-  }
-  
-  .product-card img {
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button.answer {
     width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
     border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .product-card button {
-    background-color: #007BFF;
+    background: #444;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button.answer:hover {
+    background: #555;
+    transform: translateY(-3px);
+}
+
+#next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff6600;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .product-card button:hover {
-    background-color: #0056b3;
-  }
+}
+
+#next-btn:hover {
+    background: #cc5200;
+}
